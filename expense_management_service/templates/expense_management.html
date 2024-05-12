@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/expense_management.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Page</title>
+</head>
+<body>
+    <div hidden id="DATABASE_SERVICE_URL">{{DATABASE_SERVICE_URL}} </div>
+    <header>
+
+    </header>
+    <main>
+        <div class="scrollable">
+            <div class="touchables">
+                
+            </div>
+            <button class="add-button" onclick="openExpenseModal()">Add Expense</button>
+            <button class="add-button" onclick="openUserModal()">Add Users</button>
+        </div>
+    </main>
+
+    <div id="expenseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeExpenseModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Add Expense</h2>
+            </div>
+            <div class="modal-body">
+                <label for="expenseName">Name:</label>
+                <input type="text" id="expenseName" name="expenseName" required>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" min="0" required>
+                <label for="dateTime">Date and Time:</label>
+                <input type="datetime-local" id="dateTime" name="dateTime" required>
+                <label for="userSelect">Select User:</label>
+                <select id="userSelect" name="userSelect">
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="addExpense()">Add</button>
+            </div>
+        </div>
+    </div>
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeUserModal()">&times;</span>
+            <h2>List of Users</h2>
+            <div id="userList" class="checkbox-list">
+                <!-- Checkbox list will be populated here -->
+            </div>
+            <br>
+            <div class="modal-footer">
+                <button type="button" onclick="addUsersToGroup()">Add</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/expense_management.js') }}"></script>
+</body>
+</html>

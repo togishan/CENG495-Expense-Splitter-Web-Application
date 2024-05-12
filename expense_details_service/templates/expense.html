@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/expense.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Page</title>
+</head>
+<body>
+    <div hidden id="DATABASE_SERVICE_URL">{{DATABASE_SERVICE_URL}} </div>
+    <header>
+
+    </header>
+    <main>
+        <h2>
+            Users
+        </h2> 
+        <div class="scrollable">
+            <div id="touchables" class="touchables">
+                
+            </div>
+        </div>
+        <h2>
+            Expenses
+        </h2> 
+            <div class="scrollable">
+                <div id="touchables2" class="touchables">
+                    
+                </div>
+            </div>
+        <h2>
+            Total Amount of Expenses
+        </h2>
+        <h3>
+            <div id="total">
+                
+            </div>
+        </h3>
+    
+    </main>
+
+
+
+    <script src="{{ url_for('static', filename='scripts/expense.js') }}"></script>
+</body>
+</html>

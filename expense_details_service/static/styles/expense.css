@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    --h: 212deg;
+    --l: 43%;
+    background-color: hsl(var(--h), 71%, var(--l));
+    color: white;
+    padding: 1rem;
+    text-align: right;
+}
+
+main {
+    padding: 1rem;
+}
+
+.scrollable {
+    max-height: 600px;
+    overflow-y: auto; 
+}
+
+.touchables {
+    padding-bottom: 50px; 
+}
+
+.touchable {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button.add-button, .touchable button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button.add-button:hover,
+button.add-button:focus,
+.touchable button:hover,
+.touchable button:focus {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 10px 0;
+}
+
+.modal-body label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-body input,
+.modal-body select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-footer {
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-footer button:hover {
+    background-color: #45a049;
+}
