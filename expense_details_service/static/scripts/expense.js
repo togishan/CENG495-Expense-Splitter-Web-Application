@@ -147,6 +147,7 @@ function updateExpensesList(expenses) {
         touchable.textContent = "Expense Name: " + expense.expense_name;
         touchable.innerHTML += '<br>Expense Owner: ' + expense.username;
         touchable.innerHTML += '<br>Amount: ' + expense.amount;
+        touchable.innerHTML += '<br>Expense Date: ' + expense.expense_date;
         touchablesContainer.appendChild(touchable);
     });
 }
